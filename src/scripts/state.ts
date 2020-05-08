@@ -58,12 +58,18 @@ const StateManager: StateFactory = (initialState: State) => {
 };
 
 // =============================================================================
-// Initialize application State, why the app need only state manager
+// Initialize application State here why the app need only one state manager
 // =============================================================================
-const initialState: State = {
+const initialState: State = JSON.parse(
+  localStorage.getItem("calculator__state")
+) || {
   display: "0",
 };
 
 const ApplicationState = StateManager(initialState);
+
+ApplicationState.onStateChange((state) =>
+  localStorage.setItem("calculator__state", JSON.stringify(state))
+);
 
 export default ApplicationState;

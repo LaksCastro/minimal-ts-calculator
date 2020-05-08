@@ -76,7 +76,6 @@ const Calculator: CalculatorFactory = () => {
         /\./g.test(result.toString()) && result > 0
           ? result.toFixed(1)
           : result.toString(),
-      value: result,
     }));
   };
 
