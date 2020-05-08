@@ -7,14 +7,18 @@ import { toCssCase } from "../../utils";
 export interface IButtonProps {
   text: string;
   id: string;
-  styles?: object;
+  variant?: "especial" | "normal" | "colorful" | "inative";
+  gridRow?: string;
+  gridColumn?: string;
   onClick: () => any;
 }
 const defaultButtonProps: IButtonProps = {
   text: "",
   id: "",
   onClick: () => {},
-  styles: {},
+  variant: "normal",
+  gridRow: "span 1",
+  gridColumn: "span 1",
 };
 // =============================================================================
 // To override the render method to set props interface
@@ -39,13 +43,18 @@ const Button: ButtonFactory = () => {
   const render = async (props: IButtonProps) => {
     localProps = Object.assign({}, defaultButtonProps, props);
 
-    const styles = Object.keys(localProps.styles)
-      .map((key) => `${toCssCase(key)}: ${localProps.styles[key]}`)
-      .join(";");
+    const { text, id, variant, gridColumn, gridRow } = localProps;
 
-    const { text, id } = localProps;
-
-    const html = `<button style="${styles}" id="${id}" class="wrapper__button" type="button">${text}</button>`;
+    const html = `
+      <button 
+        style="grid-row: ${gridRow}; grid-column: ${gridColumn}"
+        id="${id}" 
+        class="wrapper__button wrapper__button--${variant}" 
+        type="button"
+      >
+          ${text}
+      </button> 
+    `;
 
     return html;
   };

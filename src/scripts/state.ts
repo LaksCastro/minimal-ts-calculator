@@ -1,7 +1,7 @@
 // =============================================================================
-// Type, format of state object
+// Type, format of State object
 // =============================================================================
-type state = {
+export type State = {
   display: string;
   value: number;
 };
@@ -9,34 +9,34 @@ type state = {
 // =============================================================================
 // Format of listener: any function
 // =============================================================================
-type listener = (state: state) => any;
+export type Listener = (State: State) => any;
 
 // =============================================================================
-// Format of function sended to setState method to get new state
+// Format of function sended to setState method to get new State
 // =============================================================================
-type getNewState = (currentState: state) => state | state;
+export type GetNewState = (currentState: State) => State | State;
 
 // =============================================================================
-// Define all State Methods that allow manage the state
+// Define all State Methods that allow manage the State
 // =============================================================================
-type StateMethods = {
-  getState: () => state;
-  setState: (getNewState: getNewState) => void;
-  onStateChange: (listener: listener) => void;
+export type StateMethods = {
+  getState: () => State;
+  setState: (getNewState: GetNewState) => void;
+  onStateChange: (listener: Listener) => void;
 };
 
 // =============================================================================
 // Define StateFactory type: A function factory that return a readonly object
 // =============================================================================
-type StateFactory = (initialState: state) => Readonly<StateMethods>;
+type StateFactory = (initialState: State) => Readonly<StateMethods>;
 
-const StateManager: StateFactory = (initialState: state) => {
-  let state: state = initialState;
-  let listeners: Array<listener> = [];
+const StateManager: StateFactory = (initialState: State) => {
+  let state: State = initialState;
+  let listeners: Array<Listener> = [];
 
   const getState = () => state;
 
-  const setState = (getNewState: getNewState) => {
+  const setState = (getNewState: GetNewState) => {
     const newState =
       typeof getNewState === "function" ? getNewState(getState()) : getNewState;
 
@@ -45,7 +45,7 @@ const StateManager: StateFactory = (initialState: state) => {
     listeners.forEach((listener) => listener(getState()));
   };
 
-  const onStateChange = (listener: listener) => {
+  const onStateChange = (listener: Listener) => {
     listeners.push(listener);
   };
 

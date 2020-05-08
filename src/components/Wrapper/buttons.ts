@@ -11,12 +11,10 @@ type ButtonKey = {
 const Buttons: Array<ButtonKey> = [
   {
     props: {
-      text: "X",
+      text: "×",
       onClick: () => {},
       id: "key__mult",
-      styles: {
-        color: "#BEA1A3",
-      },
+      variant: "colorful",
     },
     Element: Button(),
   },
@@ -49,20 +47,16 @@ const Buttons: Array<ButtonKey> = [
       text: "+",
       onClick: () => {},
       id: "key__sum",
-      styles: {
-        color: "#6E918A",
-      },
+      variant: "colorful",
     },
     Element: Button(),
   },
   {
     props: {
-      text: "/",
+      text: "÷",
       onClick: () => {},
       id: "key__div",
-      styles: {
-        color: "#81A9B7",
-      },
+      variant: "colorful",
     },
     Element: Button(),
   },
@@ -95,9 +89,7 @@ const Buttons: Array<ButtonKey> = [
       text: "-",
       onClick: () => {},
       id: "key__minus",
-      styles: {
-        color: "#92ACA5",
-      },
+      variant: "colorful",
     },
     Element: Button(),
   },
@@ -106,11 +98,8 @@ const Buttons: Array<ButtonKey> = [
       text: "=",
       onClick: () => {},
       id: "key__equal",
-      styles: {
-        color: "#fff",
-        background: "#7B71EB",
-        gridRow: "span 2",
-      },
+      variant: "especial",
+      gridRow: "span 2",
     },
     Element: Button(),
   },
@@ -143,9 +132,7 @@ const Buttons: Array<ButtonKey> = [
       text: "C",
       onClick: () => {},
       id: "key__clear",
-      styles: {
-        color: "var(--color-dark)",
-      },
+      variant: "inative",
     },
     Element: Button(),
   },
@@ -154,9 +141,7 @@ const Buttons: Array<ButtonKey> = [
       text: "0",
       onClick: () => {},
       id: "key__0",
-      styles: {
-        gridColumn: "span 2",
-      },
+      gridColumn: "span 2",
     },
     Element: Button(),
   },
@@ -165,9 +150,7 @@ const Buttons: Array<ButtonKey> = [
       text: ".",
       onClick: () => {},
       id: "key__decimal",
-      styles: {
-        color: "var(--color-dark)",
-      },
+      variant: "inative",
     },
     Element: Button(),
   },
