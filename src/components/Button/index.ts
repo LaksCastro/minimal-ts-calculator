@@ -1,5 +1,4 @@
 import { IComponentMethods } from "../../types";
-import { toCssCase } from "../../utils";
 
 // =============================================================================
 // Define render props types

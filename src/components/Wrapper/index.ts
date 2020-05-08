@@ -1,5 +1,7 @@
 import { IComponentMethods } from "../../types";
 import Buttons from "./buttons";
+import DisplayComponent, { DisplayAPI, IDisplayMethods } from "../Display";
+import State from "../../scripts/state";
 
 // =============================================================================
 // To override the render method to set props interface
@@ -17,18 +19,34 @@ type WrapperFactory = () => Readonly<IWrapperMethods>;
 // Create component with factory especialized type for this component
 // =============================================================================
 const Wrapper: WrapperFactory = () => {
+  type DisplayManager = {
+    Element: IDisplayMethods;
+    API?: DisplayAPI;
+    setAPI: (API: DisplayAPI) => void;
+  };
+  const DisplayManager: DisplayManager = {
+    Element: DisplayComponent(),
+    setAPI: function (API) {
+      this.API = API;
+    },
+  };
+
   const render = async () => {
-    const childs = [];
+    const allButtons = [];
 
     for (const Button of Buttons) {
-      childs.push(await Button.Element.render(Button.props));
+      allButtons.push(await Button.Element.render(Button.props));
     }
 
     const html = `
       <div id="wrapper">
-        <div class="wrapper__display">a</div>
+        <div class="wrapper__display">
+          ${DisplayManager.Element.render({
+            text: State.getState().display,
+          })}
+        </div>
         <div class="wrapper__buttons">
-          ${childs.join("")}
+          ${allButtons.join("")}
         </div>
       </div>
     `;
@@ -40,6 +58,12 @@ const Wrapper: WrapperFactory = () => {
     for (const Button of Buttons) {
       await Button.Element.afterRender();
     }
+
+    DisplayManager.setAPI(await DisplayManager.Element.afterRender());
+
+    State.onStateChange((state) =>
+      DisplayManager.API.setDisplayText(state.display)
+    );
   };
 
   const destroy = async () => {

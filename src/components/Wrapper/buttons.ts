@@ -8,6 +8,7 @@ type ButtonKey = {
   props: IButtonProps;
   Element: IButtonMethods;
 };
+
 const Buttons: Array<ButtonKey> = [
   {
     props: {

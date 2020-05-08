@@ -85,6 +85,15 @@ body.light {
 }
 
 .wrapper__display {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: min(12px, 1rem);
+}
+.wrapper__display__text {
+  color: var(--color);
+  padding: min(12px, 1rem);
+  font-size: max(4vw, 40px);
 }
 
 .wrapper__buttons {
@@ -93,7 +102,7 @@ body.light {
   grid-template-rows: repeat(4, 1fr);
 
   grid-gap: 8px;
-  padding: 8px;
+  padding: min(12px, 1rem);
 }
 .wrapper__button {
   width: 100%;
@@ -102,7 +111,7 @@ body.light {
 
   border-radius: 12px;
 
-  padding: min(8px, 0.1rem);
+  padding: min(12px, 1rem);
 
   transition: var(--transition);
 
