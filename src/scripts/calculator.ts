@@ -55,7 +55,10 @@ const Calculator: CalculatorFactory = () => {
 
     ApplicationState.setState((currentState) => ({
       ...currentState,
-      display: result.toFixed(2),
+      display:
+        /\./g.test(result.toString()) && result > 0
+          ? result.toFixed(2)
+          : result.toString(),
       value: result,
     }));
   };
