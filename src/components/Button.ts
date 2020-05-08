@@ -3,7 +3,7 @@ import { IComponentMethods } from "../types";
 // =============================================================================
 // Define render props types
 // =============================================================================
-interface IButtonProps {
+export interface IButtonProps {
   text: string;
   id: string;
   onClick: () => any;
@@ -11,7 +11,7 @@ interface IButtonProps {
 // =============================================================================
 // To override the render method to set props interface
 // =============================================================================
-interface IButtonMethods extends IComponentMethods {
+export interface IButtonMethods extends IComponentMethods {
   render: (props: IButtonProps) => Promise<string>;
 }
 // =============================================================================
@@ -20,7 +20,7 @@ interface IButtonMethods extends IComponentMethods {
 type ButtonFactory = () => Readonly<IButtonMethods>;
 
 // =============================================================================
-// ButtonFactory with factory especialized type for this component
+// Create component with factory especialized type for this component
 // =============================================================================
 const Button: ButtonFactory = () => {
   let localProps: IButtonProps;
