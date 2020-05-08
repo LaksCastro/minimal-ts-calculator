@@ -33,7 +33,7 @@ const Button: ButtonFactory = () => {
 
     const { text, id } = localProps;
 
-    const html = `<button id="${id}" type="button">${text}</button>`;
+    const html = `<button id="${id}" class="wrapper__button" type="button">${text}</button>`;
 
     return html;
   };

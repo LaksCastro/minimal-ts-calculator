@@ -42,21 +42,27 @@ const Wrapper: WrapperFactory = () => {
   );
 
   const render = async () => {
-    const childs = Buttons.map((Button) =>
-      Button.Element.render(Button.props)
-    ).join("");
+    const childs = [];
 
-    const html = `<div id="app-wrapper">${childs}</div>`;
+    for (const Button of Buttons) {
+      childs.push(await Button.Element.render(Button.props));
+    }
+
+    const html = `<div id="wrapper">${childs.join("")}</div>`;
 
     return html;
   };
 
   const afterRender = async () => {
-    Buttons.forEach((Button) => Button.Element.afterRender());
+    for (const Button of Buttons) {
+      await Button.Element.afterRender();
+    }
   };
 
   const destroy = async () => {
-    Buttons.forEach((Button) => Button.Element.destroy());
+    for (const Button of Buttons) {
+      await Button.Element.destroy();
+    }
   };
 
   const self = {
