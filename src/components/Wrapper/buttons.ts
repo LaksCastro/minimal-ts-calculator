@@ -15,24 +15,8 @@ const Buttons: Array<ButtonKey> = [
       onClick: () => {},
       id: "key__mult",
       styles: {
-        color: "red",
+        color: "#BEA1A3",
       },
-    },
-    Element: Button(),
-  },
-  {
-    props: {
-      text: "9",
-      onClick: () => {},
-      id: "key__9",
-    },
-    Element: Button(),
-  },
-  {
-    props: {
-      text: "8",
-      onClick: () => {},
-      id: "key__8",
     },
     Element: Button(),
   },
@@ -46,11 +30,27 @@ const Buttons: Array<ButtonKey> = [
   },
   {
     props: {
+      text: "8",
+      onClick: () => {},
+      id: "key__8",
+    },
+    Element: Button(),
+  },
+  {
+    props: {
+      text: "9",
+      onClick: () => {},
+      id: "key__9",
+    },
+    Element: Button(),
+  },
+  {
+    props: {
       text: "+",
       onClick: () => {},
       id: "key__sum",
       styles: {
-        color: "green",
+        color: "#6E918A",
       },
     },
     Element: Button(),
@@ -61,24 +61,8 @@ const Buttons: Array<ButtonKey> = [
       onClick: () => {},
       id: "key__div",
       styles: {
-        color: "deepskyblue",
+        color: "#81A9B7",
       },
-    },
-    Element: Button(),
-  },
-  {
-    props: {
-      text: "6",
-      onClick: () => {},
-      id: "key__6",
-    },
-    Element: Button(),
-  },
-  {
-    props: {
-      text: "5",
-      onClick: () => {},
-      id: "key__5",
     },
     Element: Button(),
   },
@@ -92,11 +76,27 @@ const Buttons: Array<ButtonKey> = [
   },
   {
     props: {
+      text: "5",
+      onClick: () => {},
+      id: "key__5",
+    },
+    Element: Button(),
+  },
+  {
+    props: {
+      text: "6",
+      onClick: () => {},
+      id: "key__6",
+    },
+    Element: Button(),
+  },
+  {
+    props: {
       text: "-",
       onClick: () => {},
       id: "key__minus",
       styles: {
-        color: "gold",
+        color: "#92ACA5",
       },
     },
     Element: Button(),
@@ -107,25 +107,10 @@ const Buttons: Array<ButtonKey> = [
       onClick: () => {},
       id: "key__equal",
       styles: {
-        color: "#d1d1d1",
-        gridRow: "2",
+        color: "#fff",
+        background: "#7B71EB",
+        gridRow: "span 2",
       },
-    },
-    Element: Button(),
-  },
-  {
-    props: {
-      text: "3",
-      onClick: () => {},
-      id: "key__3",
-    },
-    Element: Button(),
-  },
-  {
-    props: {
-      text: "2",
-      onClick: () => {},
-      id: "key__2",
     },
     Element: Button(),
   },
@@ -139,20 +124,28 @@ const Buttons: Array<ButtonKey> = [
   },
   {
     props: {
-      text: "C",
+      text: "2",
       onClick: () => {},
-      id: "key__clear",
-      styles: {
-        color: "#d1d1d1",
-      },
+      id: "key__2",
     },
     Element: Button(),
   },
   {
     props: {
-      text: ".",
+      text: "3",
       onClick: () => {},
-      id: "key__decimal",
+      id: "key__3",
+    },
+    Element: Button(),
+  },
+  {
+    props: {
+      text: "C",
+      onClick: () => {},
+      id: "key__clear",
+      styles: {
+        color: "var(--color-dark)",
+      },
     },
     Element: Button(),
   },
@@ -162,7 +155,18 @@ const Buttons: Array<ButtonKey> = [
       onClick: () => {},
       id: "key__0",
       styles: {
-        gridColumn: "2",
+        gridColumn: "span 2",
+      },
+    },
+    Element: Button(),
+  },
+  {
+    props: {
+      text: ".",
+      onClick: () => {},
+      id: "key__decimal",
+      styles: {
+        color: "var(--color-dark)",
       },
     },
     Element: Button(),
@@ -176,6 +180,5 @@ const Buttons: Array<ButtonKey> = [
     Element: Button(),
   },
 ];
-console.log("ekaoeka");
-console.log(Buttons.length);
+
 export default Buttons;

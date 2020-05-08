@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap");
 
 $primary-color: slateblue;
 
@@ -8,41 +8,109 @@ $primary-color: slateblue;
   padding: 0;
   border: none;
   list-style: none;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto Slab", serif;
+  font-size: max(3vw, 30px);
   outline: none;
   background: transparent;
   -webkit-tap-highlight-color: transparent;
-  line-height: 1.5;
 }
+
 html,
-body {
+body,
+#root {
   width: 100%;
   height: 100%;
-  background: lightblue;
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+}
+
+body {
+  --transition: all 0.1s ease-in-out;
 }
 
 body.dark {
-  --color: #fff;
-  --color-dark: #d1d1d1;
-  --background: ;
+  // =================================
+  // Calculator colors
+  // =================================
+  --color: #e9f6fb;
+  --color-dark: #788c97;
+  --background: #1e3c44;
+  --background-content: #22434a;
+  --background-hovered: #294b52;
+  --box-shadow: none;
+
+  // =================================
+  // Body colors
+  // =================================
+  --body-background: #1e3c44;
+
+  background: var(--body-background);
 }
+
 body.light {
+  // =================================
+  // Calculator colors
+  // =================================
+  --color: #3b3d3c;
+  --color-dark: #e3e3e3;
+  --background: #fbfdfc;
+  --background-content: #ffffff;
+  --background-hovered: #f5f6f8;
+  --box-shadow: 2px 2px 3px 0 #e3e3e3;
+
+  // =================================
+  // Body colors
+  // =================================
+  --body-background: #1e3c44;
+
+  background: var(--body-background);
+
+  background: blue;
 }
 
 #wrapper {
   width: 100%;
   height: 100%;
-  background: violet;
+  background: var(--background);
 
+  display: grid;
+  grid-template-columns: 1fr;
+
+  margin: auto;
+}
+
+.wrapper__display {
+}
+
+.wrapper__buttons {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(4, 1fr);
 
-  grid-gap: 1rem;
+  grid-gap: 8px;
+  padding: 8px;
 }
-
 .wrapper__button {
-  padding: 12px;
-  color: #fff;
-  background: deepskyblue;
+  cursor: pointer;
+
+  border-radius: 12px;
+
+  padding: 8px;
+
+  transition: var(--transition);
+
+  background: var(--background-content);
+
+  box-shadow: var(--box-shadow);
+
+  color: var(--color);
+
+  font-weight: bolder;
+  &:hover {
+    background: var(--background-hovered);
+  }
+  &:active {
+    transform: translateY(2px);
+  }
 }

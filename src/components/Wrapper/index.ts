@@ -24,7 +24,14 @@ const Wrapper: WrapperFactory = () => {
       childs.push(await Button.Element.render(Button.props));
     }
 
-    const html = `<div id="wrapper">${childs.join("")}</div>`;
+    const html = `
+      <div id="wrapper">
+        <div class="wrapper__display">a</div>
+        <div class="wrapper__buttons">
+          ${childs.join("")}
+        </div>
+      </div>
+    `;
 
     return html;
   };
