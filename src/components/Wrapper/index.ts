@@ -41,7 +41,7 @@ const Wrapper: WrapperFactory = () => {
     const html = `
       <div id="wrapper">
         <div class="wrapper__display">
-          ${DisplayManager.Element.render({
+          ${await DisplayManager.Element.render({
             text: State.getState().display,
           })}
         </div>

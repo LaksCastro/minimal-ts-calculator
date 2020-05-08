@@ -40,7 +40,6 @@ body.dark {
   --background-hovered: #294b52;
   --box-shadow: none;
   --primary: #a6df38;
-  --primary-dark: #26af61;
 
   // =================================
   // Body colors
@@ -55,13 +54,12 @@ body.light {
   // Calculator colors
   // =================================
   --color: #3b3d3c;
-  --color-dark: #e3e3e3;
+  --color-dark: #c1c8c1;
   --background: #fbfdfc;
   --background-content: #ffffff;
   --background-hovered: #f5f6f8;
   --box-shadow: 2px 2px 3px 0 #e3e3e3;
-  --primary: #7b72e9;
-  --primary-dark: #8f44ad;
+  --primary: #a6df38;
 
   // =================================
   // Body colors
@@ -69,8 +67,6 @@ body.light {
   --body-background: #1e3c44;
 
   background: var(--body-background);
-
-  background: blue;
 }
 
 #wrapper {
@@ -78,13 +74,14 @@ body.light {
   height: 100%;
   background: var(--background);
 
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
 
   margin: auto;
 }
 
 .wrapper__display {
+  flex: 1;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
@@ -118,10 +115,13 @@ body.light {
   box-shadow: var(--box-shadow);
 
   &.wrapper__button--especial {
-    background: var(--primary-dark);
+    background: var(--primary);
     color: #fff;
+
+    filter: brightness(90%);
+
     &:hover {
-      background: var(--primary);
+      filter: brightness(100%);
     }
   }
   &.wrapper__button--normal {

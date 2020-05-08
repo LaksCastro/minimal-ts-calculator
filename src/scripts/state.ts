@@ -14,14 +14,14 @@ export type Listener = (State: State) => any;
 // =============================================================================
 // Format of function sended to setState method to get new State
 // =============================================================================
-export type GetNewState = (currentState: State) => State | State;
+export type GetNewState = (currentState: State) => State;
 
 // =============================================================================
 // Define all State Methods that allow manage the State
 // =============================================================================
 export type StateMethods = {
   getState: () => State;
-  setState: (getNewState: GetNewState) => void;
+  setState: (getNewState: GetNewState | State) => void;
   onStateChange: (listener: Listener) => void;
 };
 
@@ -61,10 +61,11 @@ const StateManager: StateFactory = (initialState: State) => {
 // =============================================================================
 // Initialize application State, why the app need only state manager
 // =============================================================================
-const initialState: state = {
+const initialState: State = {
   display: "0",
   value: 0,
 };
 const ApplicationState = StateManager(initialState);
+window.teste = ApplicationState;
 
 export default ApplicationState;
