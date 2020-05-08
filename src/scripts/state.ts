@@ -3,7 +3,6 @@
 // =============================================================================
 export type State = {
   display: string;
-  value: number;
 };
 
 // =============================================================================
@@ -63,9 +62,8 @@ const StateManager: StateFactory = (initialState: State) => {
 // =============================================================================
 const initialState: State = {
   display: "0",
-  value: 0,
 };
+
 const ApplicationState = StateManager(initialState);
-window.teste = ApplicationState;
 
 export default ApplicationState;
