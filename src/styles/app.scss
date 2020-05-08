@@ -6,6 +6,7 @@ $primary-color: slateblue;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  border: none;
   list-style: none;
   font-family: "Open Sans", sans-serif;
   outline: none;
@@ -18,4 +19,30 @@ body {
   width: 100%;
   height: 100%;
   background: lightblue;
+}
+
+body.dark {
+  --color: #fff;
+  --color-dark: #d1d1d1;
+  --background: ;
+}
+body.light {
+}
+
+#wrapper {
+  width: 100%;
+  height: 100%;
+  background: violet;
+
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+
+  grid-gap: 1rem;
+}
+
+.wrapper__button {
+  padding: 12px;
+  color: #fff;
+  background: deepskyblue;
 }

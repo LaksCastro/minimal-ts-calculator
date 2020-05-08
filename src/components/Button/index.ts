@@ -1,4 +1,5 @@
-import { IComponentMethods } from "../types";
+import { IComponentMethods } from "../../types";
+import { toCssCase } from "../../utils";
 
 // =============================================================================
 // Define render props types
@@ -6,8 +7,23 @@ import { IComponentMethods } from "../types";
 export interface IButtonProps {
   text: string;
   id: string;
+  styles?: {
+    gridRow?: string;
+    gridColumn?: string;
+    color?: string;
+  };
   onClick: () => any;
 }
+const defaultButtonProps: IButtonProps = {
+  text: "",
+  id: "",
+  onClick: () => {},
+  styles: {
+    gridRow: "span 1",
+    gridColumn: "span 2",
+    color: "var(--color)",
+  },
+};
 // =============================================================================
 // To override the render method to set props interface
 // =============================================================================
@@ -29,11 +45,15 @@ const Button: ButtonFactory = () => {
     document.getElementById(localProps.id);
 
   const render = async (props: IButtonProps) => {
-    localProps = props;
+    localProps = Object.assign({}, defaultButtonProps, props);
+
+    const styles = Object.keys(localProps.styles)
+      .map((key) => `${toCssCase(key)}: span ${localProps.styles[key]}`)
+      .join(";");
 
     const { text, id } = localProps;
 
-    const html = `<button id="${id}" type="button">${text}</button>`;
+    const html = `<button style="${styles}" id="${id}" class="wrapper__button" type="button">${text}</button>`;
 
     return html;
   };

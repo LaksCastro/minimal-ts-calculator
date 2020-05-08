@@ -1,5 +1,5 @@
-import { IComponentMethods } from "../types";
-import Button, { IButtonProps, IButtonMethods } from "./Button";
+import { IComponentMethods } from "../../types";
+import Buttons from "./buttons";
 
 // =============================================================================
 // To override the render method to set props interface
@@ -17,30 +17,6 @@ type WrapperFactory = () => Readonly<IWrapperMethods>;
 // Create component with factory especialized type for this component
 // =============================================================================
 const Wrapper: WrapperFactory = () => {
-  // =============================================================================
-  // Use Button Component Factory to create nine buttons [0-9]
-  // =============================================================================
-  type ButtonKey = {
-    props: IButtonProps;
-    Element: IButtonMethods;
-  };
-  const Buttons: Array<ButtonKey> = Array.from({ length: 9 }).map(
-    (_, i: number) => {
-      const Element = Button();
-
-      const props = {
-        text: (i + 1).toString(),
-        onClick: () => {},
-        id: `key__${i + 1}`,
-      };
-
-      return {
-        props,
-        Element,
-      };
-    }
-  );
-
   const render = async () => {
     const childs = [];
 
