@@ -17,7 +17,12 @@
 			function setTheme(newTheme) {
 				window.__theme = newTheme;
 				preferredTheme = newTheme;
-				document.body.className = newTheme;
+
+				const oldTheme = newTheme === "dark" ? "light" : "dark"
+
+				document.body.classList.add(newTheme);
+				document.body.classList.remove(oldTheme);
+
 				window.__onThemeChange(newTheme);
 			}
 			var preferredTheme;
@@ -31,6 +36,32 @@
 				} catch (err) { }
 			};
 			setTheme(preferredTheme || "dark");
+		})();
+
+		(function () {
+			window.__onViewChange = function () { };
+			function setView(newView) {
+				window.__view = newView;
+				preferredView = newView;
+
+				const oldView = newView === "demo" ? "functional" : "demo"
+
+				document.body.classList.add(newView);
+				document.body.classList.remove(oldView);
+
+				window.__onViewChange(newView);
+			}
+			var preferredView;
+			try {
+				preferredView = localStorage.getItem("view");
+			} catch (err) { }
+			window.__setPreferredView = function (newView) {
+				setView(newView);
+				try {
+					localStorage.setItem("view", newView);
+				} catch (err) { }
+			};
+			setView(preferredView || "functional");
 		})();
 	</script>
 	<script src="../src/App.ts"></script>

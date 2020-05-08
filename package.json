@@ -30,6 +30,8 @@
   },
   "dependencies": {
     "axios": "^0.19.2",
+    "boxicons": "^2.0.5",
+    "hammerjs": "^2.0.8",
     "menu-hamburger": "^2.0.9"
   }
 }

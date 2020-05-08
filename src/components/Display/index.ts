@@ -4,16 +4,16 @@ export type DisplayProps = {
   text: string;
 };
 
-export type DisplayAPI = {
+export interface IDisplayAPI {
   setDisplayText: (newText: string) => void;
-};
+}
 
 // =============================================================================
 // To override the render method to set props interface
 // =============================================================================
 export interface IDisplayMethods extends IComponentMethods {
   render: (props: DisplayProps) => Promise<string>;
-  afterRender: () => Promise<DisplayAPI>;
+  afterRender: () => Promise<IDisplayAPI>;
 }
 // =============================================================================
 // Create a Button Factory type to use IButtonMethods especialized interface

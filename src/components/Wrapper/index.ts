@@ -1,6 +1,7 @@
 import { IComponentMethods } from "../../types";
 import Buttons from "./buttons";
-import DisplayComponent, { DisplayAPI, IDisplayMethods } from "../Display";
+import DisplayComponent, { IDisplayAPI, IDisplayMethods } from "../Display";
+import MenuComponent, { IMenuMethods, IMenuAPI } from "../Menu";
 import State from "../../scripts/state";
 
 // =============================================================================
@@ -21,12 +22,24 @@ type WrapperFactory = () => Readonly<IWrapperMethods>;
 const Wrapper: WrapperFactory = () => {
   type DisplayManager = {
     Element: IDisplayMethods;
-    API?: DisplayAPI;
-    setAPI: (API: DisplayAPI) => void;
+    API?: IDisplayAPI;
+    setAPI: (API: IDisplayAPI) => void;
   };
   const DisplayManager: DisplayManager = {
     Element: DisplayComponent(),
     setAPI: function (API) {
+      this.API = API;
+    },
+  };
+
+  type MenuManager = {
+    Element: IMenuMethods;
+    API?: IMenuAPI;
+    setAPI: (API: IMenuAPI) => void;
+  };
+  const MenuManager: MenuManager = {
+    Element: MenuComponent(),
+    setAPI: function (API: IMenuAPI) {
       this.API = API;
     },
   };
@@ -40,6 +53,8 @@ const Wrapper: WrapperFactory = () => {
 
     const html = `
       <div id="wrapper">
+        ${await MenuManager.Element.render()}
+        
         <div class="wrapper__display">
           ${await DisplayManager.Element.render({
             text: State.getState().display,
@@ -60,6 +75,7 @@ const Wrapper: WrapperFactory = () => {
     }
 
     DisplayManager.setAPI(await DisplayManager.Element.afterRender());
+    MenuManager.setAPI(await MenuManager.Element.afterRender());
 
     State.onStateChange((state) =>
       DisplayManager.API.setDisplayText(state.display)

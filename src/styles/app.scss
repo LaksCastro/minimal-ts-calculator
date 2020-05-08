@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jost&display=swap");
 
 $primary-color: slateblue;
 
@@ -9,7 +10,6 @@ $primary-color: slateblue;
   border: none;
   list-style: none;
   font-family: "Roboto Slab", serif;
-  font-size: max(3vw, 30px);
   outline: none;
   background: transparent;
   -webkit-tap-highlight-color: transparent;
@@ -41,7 +41,7 @@ body.dark {
   --box-shadow: none;
   --primary: #a6df38;
 
-  --body-background: #1e3c44;
+  --body-background: rgb(13, 40, 48);
 
   background: var(--body-background);
 }
@@ -58,98 +58,303 @@ body.light {
   --box-shadow: 2px 2px 3px 0 #e3e3e3;
   --primary: #a6df38;
 
-  --body-background: #1e3c44;
+  --body-background: #f1f1f1;
 
   background: var(--body-background);
 }
-
-#wrapper {
-  width: 100%;
-  height: 100%;
-  background: var(--background);
-
-  display: flex;
-  flex-direction: column;
-
-  margin: auto;
-}
-
-.wrapper__display {
-  flex: 1;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  padding: min(12px, 1rem);
-}
-.wrapper__display__text {
-  color: var(--color);
-  padding: min(12px, 1rem);
-  font-size: max(4vw, 40px);
-}
-
-.wrapper__buttons {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-
-  grid-gap: 8px;
-  padding: min(12px, 1rem);
-}
-.wrapper__button {
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-
-  border-radius: 12px;
-
-  padding: min(12px, 1rem);
-
-  transition: var(--transition);
-
-  box-shadow: var(--box-shadow);
-
-  &.wrapper__button--especial {
-    background: var(--primary);
-    color: #fff;
-
-    filter: brightness(90%);
-
-    &:hover {
-      filter: brightness(100%);
-    }
+body.demo {
+  * {
+    font-size: 1em;
+    text-decoration: none;
   }
-  &.wrapper__button--normal {
-    color: var(--color);
+  #root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #wrapper {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+    background: var(--background);
+
+    display: flex;
+    flex-direction: column;
+
+    max-width: 250px;
+    max-height: 500px;
+
+    box-shadow: var(--box-shadow);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  #menu-wrapper {
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+    right: 100%;
+
     background: var(--background-content);
 
-    font-weight: bolder;
+    transition: all 0.3s ease-in-out;
+    &.opened {
+      transform: translateX(100%);
+      box-shadow: var(--box-shadow);
+    }
+    &.closed {
+      transform: translateX(0);
+      box-shadow: none;
+    }
+    * {
+      font-family: "Jost", sans-serif;
+    }
+  }
+
+  #menu-container {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 10px;
+  }
+
+  .menu-wrapper__title {
+    color: var(--color);
+    font-size: 0.8em;
+    font-weight: 400;
+    padding: 14px;
+    padding-bottom: 8px;
+  }
+
+  .menu-wrapper__item {
+    color: var(--color-dark);
+    font-size: 0.6em;
+    font-weight: normal;
+    padding: 4px 14px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    cursor: pointer;
+    transition: var(--transition);
+
+    display: flex;
+    align-items: center;
+
+    fill: var(--color-dark);
+
+    border-left: 2px solid transparent;
+
+    p {
+      margin-left: 5px;
+    }
     &:hover {
       background: var(--background-hovered);
+      color: var(--color);
+      fill: var(--color);
     }
+    &.active {
+      background: var(--background-hovered);
+      color: var(--color);
+      fill: var(--color);
+      border-left: 2px solid var(--primary);
+    }
+  }
+
+  .wrapper__display {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: min(12px, 1rem);
+  }
+  .wrapper__display__text {
+    color: var(--color);
+    padding: min(12px, 1rem);
+    font-size: 2em;
+  }
+
+  .wrapper__buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+
+    grid-gap: 8px;
+    padding: min(12px, 1rem);
+  }
+
+  .wrapper__button {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+
+    border-radius: 12px;
+
+    padding: min(12px, 1rem);
+
+    transition: var(--transition);
+
+    box-shadow: var(--box-shadow);
+
+    &.wrapper__button--especial {
+      background: var(--primary);
+      color: #fff;
+
+      filter: brightness(90%);
+
+      &:hover {
+        filter: brightness(100%);
+      }
+    }
+    &.wrapper__button--normal {
+      color: var(--color);
+      background: var(--background-content);
+
+      font-weight: bolder;
+      &:hover {
+        background: var(--background-hovered);
+      }
+      &:active {
+        transform: translateY(2px);
+      }
+    }
+    &.wrapper__button--colorful {
+      color: var(--primary);
+      background: var(--background-content);
+
+      font-weight: bolder;
+      &:hover {
+        background: var(--background-hovered);
+      }
+    }
+    &.wrapper__button--inative {
+      color: var(--color-dark);
+      background: var(--background-content);
+
+      font-weight: bolder;
+      &:hover {
+        background: var(--background-hovered);
+      }
+    }
+
     &:active {
       transform: translateY(2px);
     }
   }
-  &.wrapper__button--colorful {
-    color: var(--primary);
-    background: var(--background-content);
-
-    font-weight: bolder;
-    &:hover {
-      background: var(--background-hovered);
-    }
+}
+body.functional {
+  * {
+    font-size: max(3vw, 30px);
   }
-  &.wrapper__button--inative {
-    color: var(--color-dark);
-    background: var(--background-content);
+  #wrapper {
+    position: relative;
 
-    font-weight: bolder;
-    &:hover {
-      background: var(--background-hovered);
-    }
+    width: 100%;
+    height: 100%;
+    background: var(--background);
+
+    display: flex;
+    flex-direction: column;
+
+    margin: auto;
   }
 
-  &:active {
-    transform: translateY(2px);
+  #menu-wrapper {
+    position: absolute;
+
+    box-shadow: var(--box-shadow);
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+    padding: 12px;
+
+    background: var(--background-content);
+  }
+  .menu-wrapper__title {
+    color: var(--color);
+    font-size: max(1vw, 16px);
+  }
+
+  .wrapper__display {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: min(12px, 1rem);
+  }
+  .wrapper__display__text {
+    color: var(--color);
+    padding: min(12px, 1rem);
+    font-size: max(4vw, 40px);
+  }
+
+  .wrapper__buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+
+    grid-gap: 8px;
+    padding: min(12px, 1rem);
+  }
+  .wrapper__button {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+
+    border-radius: 12px;
+
+    padding: min(12px, 1rem);
+
+    transition: var(--transition);
+
+    box-shadow: var(--box-shadow);
+
+    &.wrapper__button--especial {
+      background: var(--primary);
+      color: #fff;
+
+      filter: brightness(90%);
+
+      &:hover {
+        filter: brightness(100%);
+      }
+    }
+    &.wrapper__button--normal {
+      color: var(--color);
+      background: var(--background-content);
+
+      font-weight: bolder;
+      &:hover {
+        background: var(--background-hovered);
+      }
+      &:active {
+        transform: translateY(2px);
+      }
+    }
+    &.wrapper__button--colorful {
+      color: var(--primary);
+      background: var(--background-content);
+
+      font-weight: bolder;
+      &:hover {
+        background: var(--background-hovered);
+      }
+    }
+    &.wrapper__button--inative {
+      color: var(--color-dark);
+      background: var(--background-content);
+
+      font-weight: bolder;
+      &:hover {
+        background: var(--background-hovered);
+      }
+    }
+
+    &:active {
+      transform: translateY(2px);
+    }
   }
 }
