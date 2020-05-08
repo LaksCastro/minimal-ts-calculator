@@ -12,9 +12,27 @@ type ButtonKey = {
 const Buttons: Array<ButtonKey> = [
   {
     props: {
-      text: "×",
-      onClick: () => ApplicationCalculator.addText("×"),
-      id: "key__mult",
+      text: "DEL",
+      onClick: () => ApplicationCalculator.del(),
+      id: "key__del",
+      gridColumn: "span 2",
+    },
+    Element: Button(),
+  },
+  {
+    props: {
+      text: "C",
+      onClick: () => ApplicationCalculator.clear(),
+      id: "key__clear",
+      variant: "inative",
+    },
+    Element: Button(),
+  },
+  {
+    props: {
+      text: "÷",
+      onClick: () => ApplicationCalculator.addText("÷"),
+      id: "key__div",
       variant: "colorful",
     },
     Element: Button(),
@@ -45,18 +63,9 @@ const Buttons: Array<ButtonKey> = [
   },
   {
     props: {
-      text: "+",
-      onClick: () => ApplicationCalculator.addText("+"),
-      id: "key__sum",
-      variant: "colorful",
-    },
-    Element: Button(),
-  },
-  {
-    props: {
-      text: "÷",
-      onClick: () => ApplicationCalculator.addText("÷"),
-      id: "key__div",
+      text: "×",
+      onClick: () => ApplicationCalculator.addText("×"),
+      id: "key__mult",
       variant: "colorful",
     },
     Element: Button(),
@@ -96,16 +105,6 @@ const Buttons: Array<ButtonKey> = [
   },
   {
     props: {
-      text: "=",
-      onClick: () => ApplicationCalculator.getResult(),
-      id: "key__equal",
-      variant: "especial",
-      gridRow: "span 2",
-    },
-    Element: Button(),
-  },
-  {
-    props: {
       text: "1",
       onClick: () => ApplicationCalculator.addText("1"),
       id: "key__1",
@@ -130,10 +129,10 @@ const Buttons: Array<ButtonKey> = [
   },
   {
     props: {
-      text: "C",
-      onClick: () => ApplicationCalculator.clear(),
-      id: "key__clear",
-      variant: "inative",
+      text: "+",
+      onClick: () => ApplicationCalculator.addText("+"),
+      id: "key__sum",
+      variant: "colorful",
     },
     Element: Button(),
   },
@@ -157,9 +156,10 @@ const Buttons: Array<ButtonKey> = [
   },
   {
     props: {
-      text: "DEL",
-      onClick: () => ApplicationCalculator.del(),
-      id: "key__del",
+      text: "=",
+      onClick: () => ApplicationCalculator.getResult(),
+      id: "key__equal",
+      variant: "especial",
     },
     Element: Button(),
   },

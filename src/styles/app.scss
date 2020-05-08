@@ -95,8 +95,8 @@ body.light {
 
 .wrapper__buttons {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
 
   grid-gap: 8px;
   padding: min(12px, 1rem);

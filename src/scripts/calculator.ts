@@ -47,11 +47,20 @@ const Calculator: CalculatorFactory = () => {
     return normalized.join("") || "0";
   };
 
-  const calculate = (expression: string): number =>
-    eval(normalizeExpression(expression));
+  const calculate = (expression: string): number | string => {
+    try {
+      const result = eval(normalizeExpression(expression));
+      if (result === Infinity) throw new Error();
+      return result;
+    } catch (error) {
+      return expression.toString();
+    }
+  };
 
   const getResult = () => {
-    const result: number = calculate(ApplicationState.getState().display);
+    const result = calculate(ApplicationState.getState().display);
+
+    if (typeof result === "string") return;
 
     ApplicationState.setState((currentState) => ({
       ...currentState,
@@ -72,6 +81,7 @@ const Calculator: CalculatorFactory = () => {
 
   const addText = (char: string) => {
     const isOp = validOperations.includes(char);
+
     if (isOp && lastIsOp(ApplicationState.getState().display)) return;
 
     ApplicationState.setState((currentState) => ({

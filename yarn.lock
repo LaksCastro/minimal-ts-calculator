@@ -3222,6 +3222,11 @@ mdn-data@2.0.6:
   resolved "https://registry.yarnpkg.com/mdn-data/-/mdn-data-2.0.6.tgz#852dc60fcaa5daa2e8cf6c9189c440ed3e042978"
   integrity sha512-rQvjv71olwNHgiTbfPZFkJtjNMciWgswYeciZhtvWLO8bmX3TnhyA62I6sTWOyZssWHJJjY6/KiWwqQsWWsqOA==
 
+menu-hamburger@^2.0.9:
+  version "2.0.9"
+  resolved "https://registry.yarnpkg.com/menu-hamburger/-/menu-hamburger-2.0.9.tgz#4fc768cdec926dadffb70cb55bc159374cd8c3a0"
+  integrity sha512-K0VEDbgWySTWib27hMUSO+6QNFmfMGA7MKYILY5x4HKGO4lwRAftNS4LaoVSNevBlMY2YU63AO14fq+yzgGpUw==
+
 merge-source-map@1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/merge-source-map/-/merge-source-map-1.0.4.tgz#a5de46538dae84d4114cc5ea02b4772a6346701f"

@@ -29,6 +29,7 @@
     "typescript": "^3.8.3"
   },
   "dependencies": {
-    "axios": "^0.19.2"
+    "axios": "^0.19.2",
+    "menu-hamburger": "^2.0.9"
   }
 }
