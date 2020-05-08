@@ -1,11 +1,12 @@
-import User from './components/User';
-import Header from './components/Header';
-import './scss/app.scss';
+import "./styles/app.scss";
 
-const app = async () => {
-	document.getElementById('header').innerHTML = Header();
-	document.getElementById('user').innerHTML = await User();
-};
+import Wrapper from "./components/Wrapper";
 
-// Load app
-app();
+(async () => {
+  const root: HTMLElement = document.getElementById("root");
+
+  const WrapperElement = Wrapper();
+
+  root.innerHTML += await WrapperElement.render();
+  WrapperElement.afterRender();
+})();

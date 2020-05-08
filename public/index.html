@@ -4,15 +4,35 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Vanilla Parcel Boilerplate</title>
+	<meta name="description" content="">
+	<title>Minimal Typescript Calculator</title>
 </head>
 
 <body>
-	<div class="container">
-		<div id="header">Header</div>
-		<div id="user"></div>
-	</div>
+	<div id="root"></div>
 
+	<script>
+		(function () {
+			window.__onThemeChange = function () { };
+			function setTheme(newTheme) {
+				window.__theme = newTheme;
+				preferredTheme = newTheme;
+				document.body.className = newTheme;
+				window.__onThemeChange(newTheme);
+			}
+			var preferredTheme;
+			try {
+				preferredTheme = localStorage.getItem("theme");
+			} catch (err) { }
+			window.__setPreferredTheme = function (newTheme) {
+				setTheme(newTheme);
+				try {
+					localStorage.setItem("theme", newTheme);
+				} catch (err) { }
+			};
+			setTheme(preferredTheme || "dark");
+		})();
+	</script>
 	<script src="../src/App.ts"></script>
 </body>
 
