@@ -119,6 +119,10 @@ const Menu: Menu = () => {
         buttonToDemo.classList.remove("active");
         buttonToFunctional.classList.add("active");
       }
+      for (const icon of document.querySelectorAll("box-icon")) {
+        icon.setAttribute("size", window.__view === "demo" ? "12px" : "1em");
+      }
+
       return setActiveViewButton;
     };
 
@@ -126,20 +130,21 @@ const Menu: Menu = () => {
 
     window.__onViewChange = setActiveViewButton();
 
-    buttonToDark.addEventListener("click", () => {
-      window.__setPreferredTheme("dark");
-    });
+    buttonToDark.addEventListener("click", () =>
+      window.__setPreferredTheme("dark")
+    );
 
-    buttonToLight.addEventListener("click", () => {
-      window.__setPreferredTheme("light");
-    });
-    buttonToFunctional.addEventListener("click", () => {
-      window.__setPreferredView("functional");
-    });
+    buttonToLight.addEventListener("click", () =>
+      window.__setPreferredTheme("light")
+    );
 
-    buttonToDemo.addEventListener("click", () => {
-      window.__setPreferredView("demo");
-    });
+    buttonToFunctional.addEventListener("click", () =>
+      window.__setPreferredView("functional")
+    );
+
+    buttonToDemo.addEventListener("click", () =>
+      window.__setPreferredView("demo")
+    );
 
     const API: IMenuAPI = {
       toggle,
