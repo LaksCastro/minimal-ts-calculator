@@ -51,6 +51,7 @@ const Display: DisplayFactory = () => {
     const API = {
       setDisplayText,
     };
+
     return API;
   };
 

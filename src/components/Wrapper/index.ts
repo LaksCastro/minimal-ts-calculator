@@ -2,6 +2,7 @@ import { IComponentMethods } from "../../types";
 import Buttons from "./buttons";
 import DisplayComponent, { IDisplayAPI, IDisplayMethods } from "../Display";
 import MenuComponent, { IMenuMethods, IMenuAPI } from "../Menu";
+import StatusBarComponent from "../StatusBar";
 import State from "../../scripts/state";
 
 // =============================================================================
@@ -44,6 +45,8 @@ const Wrapper: WrapperFactory = () => {
     },
   };
 
+  const StatusBar = StatusBarComponent();
+
   const render = async () => {
     const allButtons = [];
 
@@ -54,7 +57,7 @@ const Wrapper: WrapperFactory = () => {
     const html = `
       <div id="wrapper">
         ${await MenuManager.Element.render()}
-        
+        ${await StatusBar.render()}
         <div class="wrapper__display">
           ${await DisplayManager.Element.render({
             text: State.getState().display,
@@ -73,6 +76,7 @@ const Wrapper: WrapperFactory = () => {
     for (const Button of Buttons) {
       await Button.Element.afterRender();
     }
+    await StatusBar.afterRender();
 
     DisplayManager.setAPI(await DisplayManager.Element.afterRender());
     MenuManager.setAPI(await MenuManager.Element.afterRender());

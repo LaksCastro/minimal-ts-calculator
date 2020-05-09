@@ -70,6 +70,10 @@ body.light {
 
   background: var(--body-background);
 }
+#display__text {
+  user-select: text;
+  -webkit-user-drag: none;
+}
 body.demo {
   * {
     font-size: 1em;
@@ -98,12 +102,87 @@ body.demo {
     overflow: hidden;
   }
 
+  .status-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    width: 100%;
+    height: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    fill: var(--color);
+    padding: 4px;
+    * {
+      font-family: "Jost", sans-serif;
+    }
+  }
+  .status__left {
+    display: flex;
+    align-items: center;
+  }
+  .status-dots__wrapper {
+    display: flex;
+  }
+  .status-dots__item {
+    width: 4px;
+    height: 4px;
+    margin: 0 2px;
+    background: var(--color);
+    border: 0.5px solid var(--color);
+    border-radius: 50%;
+    &:nth-child(2n - 1) {
+      background: transparent;
+      animation: dot_animation 0.5s linear 0s infinite alternate;
+    }
+    &:last-child {
+      border-radius: 0;
+    }
+    @keyframes dot_animation {
+      from {
+        background: transparent;
+      }
+      to {
+        background: var(--color);
+      }
+    }
+  }
+  .status__time {
+    font-size: 10px;
+    color: var(--color);
+  }
+  .status__battery {
+    display: flex;
+    align-items: center;
+  }
+  #battery-icon {
+    width: 14px;
+    height: 7.5px;
+    background: linear-gradient(
+      to right,
+      var(--color) 0%,
+      var(--color) 82%,
+      transparent 82%
+    );
+    border: 1px solid var(--color);
+    border-radius: 1px;
+  }
+  .status__battery__level {
+    font-size: 10px;
+    color: var(--color);
+    margin-right: 4px;
+  }
   #menu-wrapper {
     position: absolute;
 
+    z-index: 500;
     top: 0;
     bottom: 0;
     right: 100%;
+
+    padding-top: 15px;
 
     background: var(--background-content);
 
@@ -125,7 +204,7 @@ body.demo {
     position: absolute;
     z-index: 1000;
     right: 0;
-    top: 0;
+    top: 15px;
     padding: 10px;
   }
 
@@ -266,6 +345,9 @@ body.functional {
     margin: auto;
   }
 
+  .status-bar {
+    display: none;
+  }
   #menu-wrapper {
     position: absolute;
 
