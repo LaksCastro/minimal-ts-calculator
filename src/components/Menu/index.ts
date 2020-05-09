@@ -1,4 +1,6 @@
 import "boxicons";
+import Touch from "hammerjs";
+
 import "./styles.scss";
 
 import MenuHamburger from "menu-hamburger";
@@ -67,8 +69,9 @@ const Menu: Menu = () => {
 
     return html;
   };
+
   const afterRender = async () => {
-    const { toggle, on } = MenuHamburger.initialize({
+    const { toggle, on, open, close } = MenuHamburger.initialize({
       rootElement: document.getElementById("menu-container"),
       size: 35,
       backgroundColor: "transparent",
@@ -146,6 +149,10 @@ const Menu: Menu = () => {
     buttonToDemo.addEventListener("click", () =>
       window.__setPreferredView("demo")
     );
+
+    const MenuTouch = new Touch(document);
+    MenuTouch.on("swiperight", open);
+    MenuTouch.on("swipeleft", close);
 
     const API: IMenuAPI = {
       toggle,
