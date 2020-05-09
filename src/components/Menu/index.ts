@@ -24,11 +24,11 @@ const Menu: Menu = () => {
         <nav id="menu-wrapper" class="closed">
             <h1 class="menu-wrapper__title">Calculator</h1>
             <div data-menu-action="change-to-functional" class="menu-wrapper__item">
-                <box-icon size="12px" name="landscape"></box-icon>
+                <box-icon size="12px" name="carousel"></box-icon>
                 <p>Functional Mode</p>
             </div>
             <div data-menu-action="change-to-demo" class="menu-wrapper__item">
-                <box-icon size="12px" name="carousel"></box-icon>
+                <box-icon size="12px" name="landscape"></box-icon>
                 <p>Demonstration Mode</p>
             </div>
 
