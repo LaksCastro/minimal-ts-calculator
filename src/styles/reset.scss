@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+  list-style: none;
+  font-family: "Roboto Slab", serif;
+  outline: none;
+  background: transparent;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  text-decoration: none;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+
+  min-height: 550px;
+
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body.demo {
+  * {
+    font-size: 1em;
+  }
+  #root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

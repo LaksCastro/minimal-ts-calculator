@@ -1,3 +1,4 @@
+import "./styles.scss";
 import { IComponentMethods } from "../../types";
 
 export type DisplayProps = {

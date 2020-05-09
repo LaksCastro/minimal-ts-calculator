@@ -1,0 +1,22 @@
+#display__text {
+  user-select: text;
+  -webkit-user-drag: none;
+}
+.wrapper__display {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: min(12px, 1rem);
+}
+.wrapper__display__text {
+  color: var(--color);
+  padding: min(12px, 1rem);
+}
+
+body.functional {
+  // DIPLAY
+  .wrapper__display__text {
+    font-size: max(4vw, 40px);
+  }
+}

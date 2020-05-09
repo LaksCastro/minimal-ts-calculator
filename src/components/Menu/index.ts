@@ -1,4 +1,5 @@
 import "boxicons";
+import "./styles.scss";
 
 import MenuHamburger from "menu-hamburger";
 

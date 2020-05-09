@@ -1,3 +1,4 @@
+import "./styles.scss";
 import { IComponentMethods } from "../../types";
 
 type StatusBar = () => Readonly<IComponentMethods>;

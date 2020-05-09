@@ -1,3 +1,4 @@
+import "./styles.scss";
 import { IComponentMethods } from "../../types";
 import Buttons from "./buttons";
 import DisplayComponent, { IDisplayAPI, IDisplayMethods } from "../Display";
