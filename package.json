@@ -23,7 +23,8 @@
   },
   "scripts": {
     "dev": "parcel public/index.html --out-dir development -p 3000",
-    "build": "parcel build public/index.html --out-dir dist --public-url ./"
+    "pre-deploy": "parcel build public/index.html --out-dir dist --public-url ./",
+    "deploy": "node publish.js"
   },
   "repository": {
     "type": "git",
@@ -39,6 +40,7 @@
     "@babel/core": "^7.9.0",
     "@babel/plugin-transform-runtime": "^7.9.0",
     "@babel/runtime-corejs2": "^7.9.2",
+    "gh-pages": "^2.2.0",
     "parcel-bundler": "^1.12.4",
     "parcel-plugin-pwa-manifest": "^3.0.6",
     "sass": "^1.26.3",
