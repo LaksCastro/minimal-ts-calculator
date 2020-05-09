@@ -22,8 +22,15 @@ const Calculator: CalculatorFactory = () => {
   const lastCaracterIsOperation = (text: string): boolean =>
     operations.includes(text[text.length - 1]);
 
+  const lastCaracterIsDot = (text: string): boolean => /\,$/g.test(text);
+
+  const haveDot: (text: string) => boolean = (text) => !!text.match(/\./g);
+
   const removeFirstLetter = (text: string): string =>
     text.substr(1, text.length - 1);
+
+  const removeLastLetter = (text: string): string =>
+    text.substr(0, text.length - 1);
 
   const normalizeDisplay = (text: string): string => {
     let expressionOperations: Array<string>;
@@ -43,15 +50,10 @@ const Calculator: CalculatorFactory = () => {
       valid = valid.replace(/\.\.+/g, ".");
 
       const dots = valid.match(/\./g);
-      if (dots && dots.length > 1)
-        valid = valid
-          .split("")
-          .reverse()
-          .join("")
-          .replace(".", "")
-          .split("")
-          .reverse()
-          .join("");
+
+      if (dots && dots.length > 1) {
+        valid = removeLastLetter(valid);
+      }
 
       return valid;
     });
@@ -101,10 +103,22 @@ const Calculator: CalculatorFactory = () => {
 
   const addText = (char: string) => {
     const tryingAddOperation = operations.includes(char);
+    const tryingAddDot = char === ".";
 
     const { display } = ApplicationState.getState();
+    const lastIsDot = display[display.length - 1] === ".";
 
+    // To prevent 1+2+3+.
+    if (tryingAddDot && lastCaracterIsOperation(display)) return;
+
+    // To prevent 1+3.+
+    if (tryingAddOperation && lastIsDot) return;
+
+    // To prevent 1+1++
     if (tryingAddOperation && lastCaracterIsOperation(display)) return;
+
+    // To prevent 1+1+1..
+    if (tryingAddDot && lastIsDot) return;
 
     ApplicationState.setState((currentState) => ({
       ...currentState,
