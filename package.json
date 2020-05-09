@@ -1,7 +1,7 @@
 {
-  "name": "vanilla-parcel-boilerplate",
+  "name": "minimal-ts-calculator",
   "version": "1.0.0",
-  "description": "Simple workflow starter for building vanilla JS apps",
+  "description": "A minimalist calculator for simple operations, written in Typescript, available in https://lakscastro.github.io/minimal-ts-calculator",
   "main": "index.js",
   "scripts": {
     "dev": "parcel public/index.html --out-dir development -p 3000",
@@ -14,12 +14,9 @@
   "keywords": [
     "parcel"
   ],
-  "author": "Brad Traversy",
+  "author": "Laks Castro",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/bradtraversy/vanilla-parcel-boilerplate/issues"
-  },
-  "homepage": "https://github.com/bradtraversy/vanilla-parcel-boilerplate#readme",
+  "homepage": "https://lakscastro.github.io/minimal-ts-calculator",
   "devDependencies": {
     "@babel/core": "^7.9.0",
     "@babel/plugin-transform-runtime": "^7.9.0",
@@ -29,7 +26,6 @@
     "typescript": "^3.8.3"
   },
   "dependencies": {
-    "axios": "^0.19.2",
     "boxicons": "^2.0.5",
     "hammerjs": "^2.0.8",
     "menu-hamburger": "^2.0.9"
