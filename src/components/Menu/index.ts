@@ -69,7 +69,7 @@ const Menu: Menu = () => {
   const afterRender = async () => {
     const { toggle, on } = MenuHamburger.initialize({
       rootElement: document.getElementById("menu-container"),
-      size: 30,
+      size: 35,
       backgroundColor: "transparent",
       iconColor: "var(--color)",
       lineWidth: 1,

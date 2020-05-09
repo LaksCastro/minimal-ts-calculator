@@ -40,6 +40,19 @@ const Calculator: CalculatorFactory = () => {
       if (/^0./g.test(value) && !/^0\./g.test(value))
         valid = removeFirstLetter(value);
 
+      valid = valid.replace(/\.\.+/g, ".");
+
+      const dots = valid.match(/\./g);
+      if (dots && dots.length > 1)
+        valid = valid
+          .split("")
+          .reverse()
+          .join("")
+          .replace(".", "")
+          .split("")
+          .reverse()
+          .join("");
+
       return valid;
     });
 

@@ -25,6 +25,12 @@ body,
   scroll-behavior: smooth;
   text-rendering: optimizeLegibility;
   scroll-behavior: smooth;
+
+  min-height: 550px;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 body {
