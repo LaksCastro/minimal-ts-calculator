@@ -66,18 +66,9 @@ const Button: ButtonFactory = () => {
     ButtonNode.addEventListener("click", onClick);
   };
 
-  const destroy = async () => {
-    const { onClick } = localProps;
-
-    const ButtonNode = getNodeElement();
-
-    ButtonNode.removeEventListener("click", onClick);
-  };
-
   const self = {
     render,
     afterRender,
-    destroy,
   };
 
   return Object.freeze(self);

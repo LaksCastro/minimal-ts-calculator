@@ -153,12 +153,9 @@ const Menu: Menu = () => {
     return API;
   };
 
-  const destroy = async () => {};
-
   const self = {
     render,
     afterRender,
-    destroy,
   };
 
   return Object.freeze(self);

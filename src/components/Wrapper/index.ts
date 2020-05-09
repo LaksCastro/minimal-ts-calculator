@@ -82,16 +82,9 @@ const Wrapper: WrapperFactory = () => {
     );
   };
 
-  const destroy = async () => {
-    for (const Button of Buttons) {
-      await Button.Element.destroy();
-    }
-  };
-
   const self = {
     render,
     afterRender,
-    destroy,
   };
 
   return Object.freeze(self);
