@@ -66,12 +66,12 @@ npm install
 yarn dev
 ```
 
-6. To create build (pre-deploy)
+6. To create build, static files in dist folder (pre-deploy)
 ```
 yarn pre-deploy
 ```
 
-7. To create a build and push to gh-pages
+7. To push to gh-pages
 ```
 yarn deploy
 ```
