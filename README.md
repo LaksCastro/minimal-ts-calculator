@@ -38,5 +38,40 @@ It's a very [web application](https://lakscastro.github.io/minimal-ts-calculator
   - Description: Allow to switch a dark or light theme
   - Why: Nowadays, most user-focused applications must have at least these two themes
 
+## How to clone
+1. Clone the repository
+```
+git clone https://github.com/LaksCastro/minimal-ts-calculator.git
+```
+
+2. Navigate to the project folder
+```
+cd minimal-ts-calculator
+```
+
+4. Install dependencies
+```
+yarn install
+or
+npm install
+```
+
+5. Run development server
+```
+yarn dev
+```
+
+6. To create build (pre-deploy)
+```
+yarn pre-deploy
+```
+
+7. To create a build and push to gh-pages
+```
+yarn deploy
+```
+
+> *_Note: If you want create a github workflow to deploy automatically on push in master branch, [see this repository](https://github.com/peaceiris/actions-hugo)_*
+
 ## License
 This project is licensed under the MIT license - see the LICENSE archive for more details.
