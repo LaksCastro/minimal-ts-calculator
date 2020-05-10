@@ -1,9 +1,9 @@
 import Button, { IButtonProps, IButtonMethods } from "../Button";
 import ApplicationCalculator from "../../scripts/calculator";
+
 // =============================================================================
 // Use Button Component Factory to create nine buttons [0-9] and special keys
 // =============================================================================
-
 type ButtonKey = {
   props: IButtonProps;
   Element: IButtonMethods;
