@@ -31,7 +31,7 @@ It's a very [simple web page](https://lakscastro.github.io/minimal-ts-calculator
 - Demonstration Mode
   - Description: Show the calculator with a mobile status bar and in small size
   - Why: To work with multiple stylesheets in the same page
-- Function Mode:
+- Functional Mode:
   - Description: Show the calculator in FullScreen, without unnecessary UI, like the StatusBar
   - Why: To work with UI and UX for improve the calculator usability
 - Light/Dark Mode:
