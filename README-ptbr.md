@@ -2,7 +2,7 @@
   <img src="./public/favicon.png" width="150" alt="Project Logo">
   <p align="center">⭐⭐⭐⭐⭐</p> 
   <h1 align="center">Minimal Typescript Calculator</h1>
-  <p align="center">Aprendendo Typescript e Github Action com este projeto :D</p>
+  <p align="center">Aprendendo Typescript e Github Actions com este projeto :D</p>
   <p align="center">
     <img src="https://img.shields.io/badge/PWA-installable-success" alt="PWA installable" />
     <img src="https://img.shields.io/badge/type-project-orange" alt="Repo Type" />
