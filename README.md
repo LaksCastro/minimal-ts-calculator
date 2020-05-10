@@ -78,5 +78,10 @@ yarn deploy
 
 > *_Note: If you want create a github workflow to deploy automatically on push in master branch, [see this repository](https://github.com/peaceiris/actions-hugo)_*
 
+## Built with
+- Parcel - Module Bundler
+- Typescript - Language
+- Github Actions - Allow to create a automatic workflow
+
 ## License
 This project is licensed under the MIT license - see the LICENSE archive for more details.
