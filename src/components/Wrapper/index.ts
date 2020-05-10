@@ -52,8 +52,6 @@ const Wrapper: WrapperFactory = () => {
   
   const StatusBar = StatusBarComponent();
   
-  const Keyboard = KeyboardListener();
-  
   const render = async () => {
     const allButtons = [];
 
