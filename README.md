@@ -25,7 +25,7 @@
 </p>
 
 ## But what is this?
-It's a very [web application](https://lakscastro.github.io/minimal-ts-calculator) created for to be a simple calculator, work as PWA, then is possible to install and use as Desktop or Mobile app normally
+It's a very simple [web application](https://lakscastro.github.io/minimal-ts-calculator) created for to be a simple calculator, work as PWA, then is possible to install and use as Desktop or Mobile app normally
 
 ## Features
 - Demonstration Mode
