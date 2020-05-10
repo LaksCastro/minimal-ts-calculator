@@ -9,7 +9,7 @@
   "pwaManifest": {
     "name": "Minimal Calculator",
     "shortName": "Calculator",
-    "startURL": "/minimal-ts-calculator/",
+    "startURL": "/",
     "theme": "#1E3C44",
     "generateIconOptions": {
       "baseIcon": "./public/favicon.svg",
