@@ -6,7 +6,7 @@
   "pwaManifest": {
     "name": "Minimal Calculator",
     "shortName": "Calculator",
-    "startURL": "/",
+    "startURL": "/minimal-ts-calculator/",
     "theme": "#1E3C44",
     "generateIconOptions": {
       "baseIcon": "./public/favicon.svg",
@@ -28,7 +28,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bradtraversy/vanilla-parcel-boilerplate.git"
+    "url": "git+https://github.com/LaksCastro/minimal-ts-calculator.git"
   },
   "keywords": [
     "parcel"
