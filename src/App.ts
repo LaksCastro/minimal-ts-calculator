@@ -1,5 +1,4 @@
 import "./styles/app.scss";
-import { register } from "./serviceWorker";
 import Wrapper from "./components/Wrapper";
 
 (async () => {
@@ -9,6 +8,4 @@ import Wrapper from "./components/Wrapper";
 
   root.innerHTML += await WrapperElement.render();
   WrapperElement.afterRender();
-
-  register();
 })();
