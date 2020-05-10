@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./src/assets/images/starry.png" width="150" alt="Project Logo">
+  <img src="./public/favicon.png" width="150" alt="Project Logo">
   <p align="center">⭐⭐⭐⭐⭐</p> 
   <h1 align="center">Minimal Typescript Calculator</h1>
   <p align="center">Learning Typescript and Github Actions with this project :D</p>
