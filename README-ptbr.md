@@ -2,7 +2,7 @@
   <img src="./public/favicon.png" width="150" alt="Project Logo">
   <p align="center">⭐⭐⭐⭐⭐</p> 
   <h1 align="center">Minimal Typescript Calculator</h1>
-  <p align="center">Learning Typescript and Github Actions with this project :D</p>
+  <p align="center">Aprendendo Typescript e Github Action com este projeto :D</p>
   <p align="center">
     <img src="https://img.shields.io/badge/PWA-installable-success" alt="PWA installable" />
     <img src="https://img.shields.io/badge/type-project-orange" alt="Repo Type" />
@@ -28,45 +28,45 @@
 Este é um [aplicativo web](https://lakscastro.github.io/minimal-ts-calculator) bem simples, criado para ser uma calculadora de funções básicas, trabalha como uma PWA, então é possível instalar e usar como se fosse um aplicativo Desktop/Mobile normalmente
 
 ## Features
-- Demonstration Mode
-  - Description: Show the calculator with a mobile status bar and in small size
-  - Why: To work with multiple stylesheets in the same page
-- Functional Mode:
-  - Description: Show the calculator in FullScreen, without unnecessary UI, like the StatusBar
-  - Why: To work with UI and UX for improve the calculator usability
-- Light/Dark Mode:
-  - Description: Allow to switch a dark or light theme
-  - Why: Nowadays, most user-focused applications must have at least these two themes
+- Modo de demonstração
+  - Descrição: Mostra a calculatora com uma barra de status mobile e em um tamanho pequeno
+  - Razão: Para trabalhar com múltiplos estilos css na mesma página
+- Modo Funcional:
+  - Descrição: Mostra a calculadora em FullScreen, sem qualquer UI desnecessária, como a barra de status
+  - Razão: Para trabalhar e estudar sobre como usar UI e UX para melhorar a usabilidade da calculadora
+- Modo Claro/Escuro:
+  - Descrição: Permite escolher entre os temas escuro e claro
+  - Razão: Hoje em dia, a maioria dos aplicativos focados no usuário devem ter no mínimo esses dois temas
 
-## How to clone
-### Requeriments
-- Node installed
-- Npm or Yarn installed
+## Como clonar
+### Requerimentos
+- Node instalado
+- Npm ou Yarn instalado
 
-### Installing
-1. Clone the repository
+### Instalando
+1. Clone este repositório
 ```
 git clone https://github.com/LaksCastro/minimal-ts-calculator.git
 ```
 
-2. Navigate to the project folder
+2. Navegue até a pasta do projeto
 ```
 cd minimal-ts-calculator
 ```
 
-4. Install dependencies
+4. Instale as dependências
 ```
 yarn install
 or
 npm install
 ```
 
-5. Run development server
+5. Inicie o servidor de desenvolvimento
 ```
 yarn dev
 ```
 
-6. To create build (pre-deploy)
+6. Criar a To create build (pre-deploy)
 ```
 yarn pre-deploy
 ```
