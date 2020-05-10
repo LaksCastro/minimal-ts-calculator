@@ -13,5 +13,5 @@ jobs:
         with:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
-          remote_url: https://github.com/appleboy/gh-pages-action.git
+          remote_url: https://github.com/lakscastro/minimal-ts-calculator.git
           target_directory: /dist
