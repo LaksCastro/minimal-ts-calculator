@@ -1,0 +1,17 @@
+name: Deploy the static file to GitHub Page
+on: [push]
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v1
+
+      - name: deploy to target directory
+        uses: ./
+        with:
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          remote_url: https://github.com/appleboy/gh-pages-action.git
+          target_directory: /dist
