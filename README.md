@@ -25,7 +25,7 @@
 </p>
 
 ## But what is this?
-It's a very [simple web page](https://lakscastro.github.io/starry-sky), with only a Fullscreen canvas giving life to millions of stars, drops of water, or anything you have understood, in the end it's just lines... drawn, erased and redrawn...
+It's a very [simple web page](https://lakscastro.github.io/minimal-ts-calculator).
 
 ## License
 This project is licensed under the MIT license - see the LICENSE archive for more details.
