@@ -1,1 +1,71 @@
-{"name":"Minimal Calculator","short_name":"Calculator","start_url":"/minimal-ts-calculator","scope":"./","description":"A minimalist calculator for simple operations, written in Typescript, available in https://lakscastro.github.io/minimal-ts-calculator","icons":[{"src":"./favicon-32x32.6631451b.webp","sizes":"32x32","type":"image/webp"},{"src":"./favicon-32x32.e575ee56.png","sizes":"32x32","type":"image/png"},{"src":"./favicon-64x64.3a7fbad4.webp","sizes":"64x64","type":"image/webp"},{"src":"./favicon-64x64.48a58864.png","sizes":"64x64","type":"image/png"},{"src":"./favicon-192x192.515bb7bd.webp","sizes":"192x192","type":"image/webp"},{"src":"./favicon-192x192.f94ce260.png","sizes":"192x192","type":"image/png"},{"src":"./favicon-384x384.a9c86442.webp","sizes":"384x384","type":"image/webp"},{"src":"./favicon-384x384.cc8fcb16.png","sizes":"384x384","type":"image/png"},{"src":"./favicon-512x512.157df8f2.webp","sizes":"512x512","type":"image/webp"},{"src":"./favicon-512x512.cb1f0d83.png","sizes":"512x512","type":"image/png"},{"src":"./favicon-780x780.72b0bda4.webp","sizes":"780x780","type":"image/webp"},{"src":"./favicon-780x780.d90251af.png","sizes":"780x780","type":"image/png"}],"theme_color":"#1E3C44","background_color":"#1E3C44","display":"standalone"}
+{
+    "name": "Minimal Calculator",
+    "short_name": "Calculator",
+    "start_url": "/minimal-ts-calculator",
+    "description": "A minimalist calculator for simple operations, written in Typescript, available in https://lakscastro.github.io/minimal-ts-calculator",
+    "icons": [
+        {
+            "src": "./favicon-32x32.6631451b.webp",
+            "sizes": "32x32",
+            "type": "image/webp"
+        },
+        {
+            "src": "./favicon-32x32.e575ee56.png",
+            "sizes": "32x32",
+            "type": "image/png"
+        },
+        {
+            "src": "./favicon-64x64.3a7fbad4.webp",
+            "sizes": "64x64",
+            "type": "image/webp"
+        },
+        {
+            "src": "./favicon-64x64.48a58864.png",
+            "sizes": "64x64",
+            "type": "image/png"
+        },
+        {
+            "src": "./favicon-192x192.515bb7bd.webp",
+            "sizes": "192x192",
+            "type": "image/webp"
+        },
+        {
+            "src": "./favicon-192x192.f94ce260.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "./favicon-384x384.a9c86442.webp",
+            "sizes": "384x384",
+            "type": "image/webp"
+        },
+        {
+            "src": "./favicon-384x384.cc8fcb16.png",
+            "sizes": "384x384",
+            "type": "image/png"
+        },
+        {
+            "src": "./favicon-512x512.157df8f2.webp",
+            "sizes": "512x512",
+            "type": "image/webp"
+        },
+        {
+            "src": "./favicon-512x512.cb1f0d83.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "./favicon-780x780.72b0bda4.webp",
+            "sizes": "780x780",
+            "type": "image/webp"
+        },
+        {
+            "src": "./favicon-780x780.d90251af.png",
+            "sizes": "780x780",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#1E3C44",
+    "background_color": "#1E3C44",
+    "display": "standalone"
+}
