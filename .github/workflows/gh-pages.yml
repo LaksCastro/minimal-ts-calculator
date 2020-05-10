@@ -20,10 +20,10 @@ jobs:
           hugo-version: "0.68.3"
 
       - name: Pre Build
-        run: run pre-build
+        run: yarn run pre-build
 
       - name: Build
-        run: run build
+        run: yarn run build
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
