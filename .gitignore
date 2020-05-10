@@ -1,5 +1,5 @@
-node_modules
+/node_modules
 .cache/
-development
-production
-dist
+/development
+/production
+/dist
