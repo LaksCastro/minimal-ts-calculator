@@ -1,3 +1,6 @@
+name: GitHub Pages Deploy
+  uses: appleboy/gh-pages-action@v0.0.2
+
 name: Deploy the static file to GitHub Page
 on:
   push:
