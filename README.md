@@ -27,5 +27,16 @@
 ## But what is this?
 It's a very [simple web page](https://lakscastro.github.io/minimal-ts-calculator).
 
+## Features
+- Demonstration Mode
+  - Description: Show the calculator with a mobile status bar and in small size
+  - Why: To work with multiple stylesheets in the same page
+- Function Mode:
+  - Description: Show the calculator in FullScreen, without unnecessary UI, like the StatusBar
+  - Why: To work with UI and UX for improve the calculator usability
+- Light/Dark Mode:
+  - Description: Allow to switch a dark or light theme
+  - Why: Nowadays, most user-focused applications must have at least these two themes
+
 ## License
 This project is licensed under the MIT license - see the LICENSE archive for more details.
