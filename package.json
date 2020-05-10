@@ -5,13 +5,13 @@
   "main": "index.js",
   "sw-precache": {
     "maximumFileSizeToCacheInBytes": 10485760,
-    "replacePrefix": "/minimal-ts-calculator"
+    "replacePrefix": "/minimal-ts-calculator/"
   },
   "pwaManifest": {
     "name": "Minimal Calculator",
     "shortName": "Calculator",
-    "startURL": "/minimal-ts-calculator",
-    "scope": "/minimal-ts-calculator",
+    "startURL": "/minimal-ts-calculator/",
+    "scope": "/minimal-ts-calculator/",
     "theme": "#1E3C44",
     "generateIconOptions": {
       "baseIcon": "./public/favicon.svg",
