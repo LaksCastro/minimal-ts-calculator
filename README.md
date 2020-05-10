@@ -39,6 +39,11 @@ It's a very [web application](https://lakscastro.github.io/minimal-ts-calculator
   - Why: Nowadays, most user-focused applications must have at least these two themes
 
 ## How to clone
+### Requeriments
+- Node installed
+- Npm or Yarn installed
+
+### Installing
 1. Clone the repository
 ```
 git clone https://github.com/LaksCastro/minimal-ts-calculator.git
