@@ -9,7 +9,7 @@ import MenuComponent, { IMenuMethods, IMenuAPI } from "../Menu";
 import StatusBarComponent from "../StatusBar";
 
 import State from "../../scripts/state";
-import Keyboard from "../../scripts/keyboard";
+import KeyboardListener from "../../scripts/keyboard";
 
 // =============================================================================
 // To override the render method to set props interface
@@ -50,9 +50,11 @@ const Wrapper: WrapperFactory = () => {
       this.API = API;
     },
   };
-
+  
   const StatusBar = StatusBarComponent();
-
+  
+  const Keyboard = KeyboardListener();
+  
   const render = async () => {
     const allButtons = [];
 
