@@ -45,12 +45,12 @@
     "parcel-plugin-pwa-manifest": "^3.0.6",
     "sass": "^1.26.3",
     "typescript": "^3.8.3",
-    "workbox-cli": "^5.1.3",
-    "hotkeys-js": "^3.7.3"
+    "workbox-cli": "^5.1.3"
   },
   "dependencies": {
     "boxicons": "^2.0.5",
     "hammerjs": "^2.0.8",
-    "menu-hamburger": "^2.0.9"
+    "menu-hamburger": "^2.0.9",
+    "hotkeys-js": "^3.7.3"
   }
 }
