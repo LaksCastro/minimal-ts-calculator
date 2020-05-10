@@ -16,11 +16,11 @@
   </p>
 </p>
 <p align="center">
-  <img src="/src/assets/images/starry-gif.gif" alt="Demo Image" height="200" />
+  <img src="/src/assets/calculator-gif.gif" alt="Demo Image" height="200" />
 </p>
 
 <p>
-  <img src="./src/assets/images/pt-br.png" alt="Portuguese" height="16" />
+  <img src="./src/assets/pt-br.png" alt="Portuguese" height="16" />
   <a href="https://github.com/LaksCastro/starry-sky/blob/master/README-ptbr.md">Ler em português</a>
 </p>
 
