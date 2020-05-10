@@ -1,9 +1,8 @@
 import "boxicons";
 import Touch from "hammerjs";
+import MenuHamburger from "menu-hamburger";
 
 import "./styles.scss";
-
-import MenuHamburger from "menu-hamburger";
 
 import { IComponentMethods } from "../../types";
 
