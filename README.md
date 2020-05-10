@@ -5,9 +5,9 @@
   <p align="center">Learning Typescript and Github Actions with this project :D</p>
   <p align="center">
     <img src="https://img.shields.io/badge/PWA-installable-success" alt="PWA installable" />
-    <img src="https://img.shields.io/badge/type-project-informational" alt="Repo Type" />
+    <img src="https://img.shields.io/badge/type-project-orange" alt="Repo Type" />
     <img src="https://img.shields.io/badge/language-typescript-blue" alt="Repo Main Language" />
-    <img src="https://img.shields.io/badge/platform-web-success" alt="Project Platform" />
+    <img src="https://img.shields.io/badge/platform-web-yellow" alt="Project Platform" />
   </p>
   <p align="center">
     <a href="https://twitter.com/lakscastro" target="_blank">
