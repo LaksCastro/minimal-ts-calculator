@@ -1,10 +1,15 @@
 import "./styles.scss";
+
 import { IComponentMethods } from "../../types";
+
 import Buttons from "./buttons";
+
 import DisplayComponent, { IDisplayAPI, IDisplayMethods } from "../Display";
 import MenuComponent, { IMenuMethods, IMenuAPI } from "../Menu";
 import StatusBarComponent from "../StatusBar";
+
 import State from "../../scripts/state";
+import Keyboard from "../../scripts/keyboard";
 
 // =============================================================================
 // To override the render method to set props interface
@@ -85,6 +90,8 @@ const Wrapper: WrapperFactory = () => {
     State.onStateChange((state) =>
       DisplayManager.API.setDisplayText(state.display)
     );
+    
+    Keyboard.initialize();
   };
 
   const self = {
