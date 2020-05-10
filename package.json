@@ -4,14 +4,13 @@
   "description": "A minimalist calculator for simple operations, written in Typescript, available in https://lakscastro.github.io/minimal-ts-calculator",
   "main": "index.js",
   "sw-precache": {
-    "maximumFileSizeToCacheInBytes": 10485760,
-    "additionalCodeFile": "addSome.js"
+    "maximumFileSizeToCacheInBytes": 10485760
   },
   "pwaManifest": {
     "name": "Minimal Calculator",
     "shortName": "Calculator",
     "startURL": "/minimal-ts-calculator",
-    "scope": "/minimal-ts-calculator",
+    "replacePrefix": "/minimal-ts-calculator",
     "theme": "#1E3C44",
     "generateIconOptions": {
       "baseIcon": "./public/favicon.svg",
