@@ -76,9 +76,9 @@ yarn pre-deploy
 yarn deploy
 ```
 
-> *_Note: If you want create a github workflow to deploy automatically on push in master branch, [see this repository](https://github.com/peaceiris/actions-hugo)_*
+> *_Nota: se você quiser criar um Workflow no Github para automatizar seu trabalho de criar a build e dar deploy toda vez que houver alteração na master branch, leia mais sobre [neste repositório](https://github.com/peaceiris/actions-hugo)_*
 
-## Built with
+## Construído com
 - Parcel - como Module Bundler
 - Typescript - Linguagem
 - Github Actions - Permite criar um fluxo de trabalho automático
