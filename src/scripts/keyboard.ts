@@ -29,3 +29,5 @@ const Keyboard : Keyboard = () => {
   
   return Object.freeze(self);
 }
+
+export default Keyboard;
