@@ -71,7 +71,7 @@ yarn dev
 yarn pre-deploy
 ```
 
-7. Enviar para o Github Pages
+7. Enviar para o Github Pages (deploy)
 ```
 yarn deploy
 ```
