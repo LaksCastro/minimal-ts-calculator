@@ -66,12 +66,12 @@ npm install
 yarn dev
 ```
 
-6. Criar a To create build (pre-deploy)
+6. Criar a build (pre-deploy)
 ```
 yarn pre-deploy
 ```
 
-7. To create a build and push to gh-pages
+7. Enviar para o Github Pages
 ```
 yarn deploy
 ```
