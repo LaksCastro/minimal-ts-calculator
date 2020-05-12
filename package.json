@@ -50,7 +50,6 @@
   "dependencies": {
     "boxicons": "^2.0.5",
     "hammerjs": "^2.0.8",
-    "menu-hamburger": "^2.0.9",
-    "hotkeys-js": "^3.7.3"
+    "menu-hamburger": "^2.0.9"
   }
 }
