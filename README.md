@@ -83,5 +83,18 @@ yarn deploy
 - Typescript - Language
 - Github Actions - Allow to create a automatic workflow
 
-## License
-This project is licensed under the MIT license - see the LICENSE archive for more details.
+<br>
+<br>
+<br>
+<br>
+
+<h2 align="center">
+  Open Source
+</h2>
+<p align="center">
+  <sub>Copyright © 2020-present, Laks Castro.</sub>
+</p>
+<p align="center">Minimal TS Calculator <a href="https://github.com/LaksCastro/minimal-ts-calculator/blob/master/LICENSE.md">is MIT licensed 💖</a></p>
+<p align="center">
+  <img src="/public/favicon.png" width="35" />
+</p>
